@@ -13,7 +13,7 @@ class UserInterface:
         print("\n=== System Error Reporter ===")
         print("1. Run tests")
         print("2. Enter user data")
-        print("3. View logs (last file)")
+        print("3. View logs")
         print("4. Exit the program")
 
 # Запит на введення даних
@@ -48,7 +48,7 @@ class UserInterface:
             with open(self.logger.logger.handlers[0].baseFilename, "r") as file:
                 logs = file.readlines()
                 print("\n--- Logs ---")
-                for log in logs[-10:]: 
+                for log in logs: 
                     print(log.strip())
         except FileNotFoundError:
             print("The log file has not been created yet.")

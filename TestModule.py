@@ -1,3 +1,4 @@
+# Імітація системної помилки
 
 class TestModule:
     def __init__(self, error_handler):
